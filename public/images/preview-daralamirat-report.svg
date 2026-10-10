@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="chart" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1F2937" stroke-width="1" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <rect width="1440" height="900" fill="url(#grid)"/>
+  <circle cx="720" cy="400" r="450" fill="url(#glow)" filter="blur(70px)"/>
+
+  <!-- Application Window -->
+  <g transform="translate(100, 60)">
+    <!-- Window Container -->
+    <rect width="1240" height="780" rx="16" fill="#0B1120" stroke="#1E293B" stroke-width="2"/>
+    
+    <!-- Top Bar -->
+    <rect width="1240" height="54" rx="16" fill="#0F172A"/>
+    <rect y="38" width="1240" height="16" fill="#0F172A"/>
+    <line x1="0" y1="54" x2="1240" y2="54" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Traffic Lights -->
+    <circle cx="30" cy="27" r="6" fill="#EF4444"/>
+    <circle cx="50" cy="27" r="6" fill="#F59E0B"/>
+    <circle cx="70" cy="27" r="6" fill="#10B981"/>
+
+    <!-- App Title & Breadcrumb -->
+    <text x="100" y="32" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Dar Al-Amirat POS &bull; Analytics &amp; BI Reporting Engine</text>
+    <rect x="1100" y="14" width="110" height="26" rx="6" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-opacity="0.4"/>
+    <text x="1155" y="31" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">LIVE CLUSTER</text>
+
+    <!-- Sidebar -->
+    <rect x="0" y="54" width="220" height="726" fill="#0D1527" stroke="#1E293B" stroke-width="1"/>
+    
+    <!-- Sidebar Items -->
+    <rect x="16" y="80" width="188" height="38" rx="8" fill="#06B6D4" fill-opacity="0.15" stroke="#06B6D4" stroke-opacity="0.4"/>
+    <text x="50" y="104" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">&bull; Executive BI Hub</text>
+    
+    <text x="50" y="150" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">&bull; Sales Velocity</text>
+    <text x="50" y="195" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">&bull; Inventory Valuation</text>
+    <text x="50" y="240" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">&bull; Shift Reconciliation</text>
+    <text x="50" y="285" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">&bull; Tax &amp; ZATCA Auditing</text>
+    <text x="50" y="330" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">&bull; Custom SQL Reports</text>
+
+    <!-- Main Content Area -->
+    <!-- Metrics Row -->
+    <g transform="translate(245, 80)">
+      <!-- KPI 1 -->
+      <rect width="230" height="110" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+      <text x="20" y="32" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">DAILY REVENUE (AGGREGATED)</text>
+      <text x="20" y="75" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">$184,920.50</text>
+      <text x="20" y="98" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">&uarr; +14.8% vs last cycle</text>
+
+      <!-- KPI 2 -->
+      <rect x="250" width="230" height="110" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+      <text x="270" y="32" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">TRANSACTION VOLUME</text>
+      <text x="270" y="75" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">42,819</text>
+      <text x="270" y="98" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Real-time multi-branch sync</text>
+
+      <!-- KPI 3 -->
+      <rect x="500" width="230" height="110" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+      <text x="520" y="32" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">AVG QUERY EXECUTION</text>
+      <text x="520" y="75" fill="#A78BFA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">12.4 ms</text>
+      <text x="520" y="98" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">&check; Index optimized</text>
+
+      <!-- KPI 4 -->
+      <rect x="750" width="215" height="110" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+      <text x="770" y="32" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">EXPORT PIPELINES</text>
+      <text x="770" y="75" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">PDF / XLS</text>
+      <text x="770" y="98" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Instant asynchronous jobs</text>
+    </g>
+
+    <!-- Main Chart Section -->
+    <g transform="translate(245, 215)">
+      <rect width="965" height="340" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+      <text x="25" y="35" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Multi-Branch Sales Velocity &amp; Peak Hour Distribution</text>
+      <text x="25" y="55" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Direct SQL Server aggregated pipeline with sub-second recalculation</text>
+      
+      <!-- Chart Area -->
+      <path d="M 40 280 L 140 220 L 260 250 L 380 160 L 500 200 L 620 110 L 740 140 L 860 80 L 920 120 L 920 300 L 40 300 Z" fill="url(#chart)"/>
+      <path d="M 40 280 L 140 220 L 260 250 L 380 160 L 500 200 L 620 110 L 740 140 L 860 80 L 920 120" fill="none" stroke="#06B6D4" stroke-width="3.5" stroke-linecap="round"/>
+      
+      <!-- Dots on Chart -->
+      <circle cx="620" cy="110" r="5" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+      <circle cx="860" cy="80" r="5" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+    </g>
+
+    <!-- Bottom Data Grid Table -->
+    <g transform="translate(245, 575)">
+      <rect width="965" height="175" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+      <!-- Table Header -->
+      <rect width="965" height="36" rx="12" fill="#1E293B"/>
+      <text x="25" y="23" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">BRANCH LOCATION</text>
+      <text x="320" y="23" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">ACTIVE POS REGISTERS</text>
+      <text x="580" y="23" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">TRANSACTIONS TODAY</text>
+      <text x="830" y="23" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">STATUS</text>
+
+      <!-- Row 1 -->
+      <text x="25" y="70" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Dar Al-Amirat &bull; Main Branch</text>
+      <text x="320" y="70" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">18 Active Terminals</text>
+      <text x="580" y="70" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">14,290 Receipts</text>
+      <text x="830" y="70" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">&bull; Synchronized</text>
+
+      <!-- Row 2 -->
+      <text x="25" y="115" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Dar Al-Amirat &bull; Retail Plaza</text>
+      <text x="320" y="115" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">12 Active Terminals</text>
+      <text x="580" y="115" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">9,840 Receipts</text>
+      <text x="830" y="115" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">&bull; Synchronized</text>
+
+      <!-- Row 3 -->
+      <text x="25" y="155" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Dar Al-Amirat &bull; Express Outlets</text>
+      <text x="320" y="155" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">8 Active Terminals</text>
+      <text x="580" y="155" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">6,120 Receipts</text>
+      <text x="830" y="155" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">&bull; Synchronized</text>
+    </g>
+
+  </g>
+</svg>

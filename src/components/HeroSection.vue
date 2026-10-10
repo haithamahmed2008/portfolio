@@ -1,0 +1,191 @@
+<template>
+  <section id="about" class="relative pt-32 pb-20 lg:pt-36 lg:pb-28 overflow-hidden">
+    <!-- Ambient Background Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-cyan-500/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        
+        <!-- Left Column: Bio & Main Value Proposition -->
+        <div class="lg:col-span-7 flex flex-col items-start">
+          
+          <!-- Badges Row -->
+          <div class="flex flex-wrap items-center gap-3 mb-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 text-xs font-semibold backdrop-blur-md shadow-inner shadow-emerald-500/20">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>{{ portfolioData.badge }}</span>
+            </div>
+
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-900/80 border border-gray-800 text-gray-300 text-xs font-mono">
+              <MapPin class="w-3.5 h-3.5 text-cyan-400" />
+              <span>{{ portfolioData.location }}</span>
+            </div>
+          </div>
+
+          <!-- Strong, Broad Full-Stack Headline -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.18] mb-6">
+            Engineering Scalable, <br class="hidden sm:block" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-violet-400">
+              High-Performance Web Applications
+            </span>
+            <br />
+            Powered by Clean Architecture &amp; AI.
+          </h1>
+
+          <!-- Personal Headshot Card & Bio Combined -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#111827]/90 to-[#0F172A]/80 border border-gray-800 mb-8 backdrop-blur-md w-full">
+            <div class="relative w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-2xl p-[2px] bg-gradient-to-tr from-cyan-400 via-violet-500 to-emerald-400 shadow-xl shadow-cyan-500/10">
+              <img 
+                :src="portfolioData.avatar" 
+                alt="Haithm Malek" 
+                class="w-full h-full object-cover rounded-[14px] bg-gray-900"
+              />
+              <div class="absolute -bottom-1 -right-1 p-1 bg-[#0B0F19] rounded-full">
+                <CheckCircle class="w-4 h-4 text-emerald-400 fill-emerald-400/20" />
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">Senior Full-Stack &amp; AI Engineer</span>
+                <span class="text-gray-500">•</span>
+                <span class="text-xs font-mono text-gray-400">10+ Years</span>
+              </div>
+              <p class="text-sm sm:text-[15px] text-gray-300 leading-relaxed mt-1.5 font-normal">
+                {{ portfolioData.summary }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Core Metrics Highlight Row with Real Icons -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mb-8">
+            <div 
+              v-for="(stat, idx) in portfolioData.stats" 
+              :key="idx" 
+              class="bg-[#111827]/80 border border-gray-800 rounded-xl p-3.5 backdrop-blur-md transition-all duration-300 hover:border-gray-700 flex flex-col justify-between"
+            >
+              <div class="flex items-center justify-between">
+                <div class="text-lg sm:text-xl font-black text-white font-mono bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+                  {{ stat.value }}
+                </div>
+                <component :is="getStatIcon(stat.icon)" class="w-4 h-4 text-gray-400" />
+              </div>
+              <div class="text-[11px] sm:text-xs text-gray-400 mt-1.5 font-medium leading-tight">
+                {{ stat.label }}
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            <a 
+              href="#projects" 
+              class="w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm sm:text-base shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            >
+              <span>Explore Live Projects</span>
+              <ArrowRight class="w-4 h-4 text-cyan-200" />
+            </a>
+
+            <a 
+              :href="portfolioData.resumePath" 
+              download="Haithm_Malek_Resume.pdf"
+              class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#111827] border border-gray-700 hover:border-cyan-500/50 text-gray-200 hover:text-white font-medium text-sm sm:text-base hover:bg-gray-800/80 transition-all duration-300"
+            >
+              <FileDown class="w-4 h-4 text-cyan-400" />
+              <span>Download Resume PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Code Terminal & Tech Showcase -->
+        <div class="lg:col-span-5 w-full">
+          <div class="relative rounded-2xl bg-[#0E1424] border border-gray-800 shadow-2xl overflow-hidden group hover:border-cyan-500/40 transition-all duration-500">
+            
+            <!-- Terminal Header -->
+            <div class="bg-[#151D30] px-4 py-3 border-b border-gray-800 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+              </div>
+              <div class="text-xs font-mono text-gray-300 flex items-center gap-2">
+                <Terminal class="w-3.5 h-3.5 text-cyan-400" />
+                <span>HaithmMalek::FullStackEngineer.php</span>
+              </div>
+              <div class="text-[10px] font-mono text-cyan-400 bg-cyan-950/70 px-2 py-0.5 rounded border border-cyan-800/50">
+                SOLID &amp; Clean
+              </div>
+            </div>
+
+            <!-- Terminal Code Window with Authentic Full-Stack Service Pattern -->
+            <div class="p-5 font-mono text-xs sm:text-[13px] leading-relaxed overflow-x-auto text-gray-300">
+              <div class="text-gray-500">// Scalable Full-Stack Architecture Service</div>
+              <div class="text-violet-400">namespace <span class="text-white">App\Services\Core;</span></div>
+              <div class="text-violet-400 mt-2">class <span class="text-amber-300">ApplicationEngine</span> <span class="text-violet-400">implements</span> <span class="text-cyan-300">FullStackInterface</span></div>
+              <div>{</div>
+              <div class="pl-4 text-emerald-400">
+                <span class="text-violet-400">public function</span> handleSecureTransaction(<span class="text-cyan-300">Payload</span> $data): <span class="text-cyan-300">Response</span>
+              </div>
+              <div class="pl-4">{</div>
+              <div class="pl-8 text-gray-400">
+                <span class="text-violet-400">return</span> <span class="text-cyan-300">DB::transaction</span>(<span class="text-violet-400">function</span> () <span class="text-violet-400">use</span> ($data) {
+              </div>
+              <div class="pl-12 text-slate-300">
+                <span class="text-gray-500">// 1. Validate &amp; Guard Business Rules</span>
+              </div>
+              <div class="pl-12 text-slate-300">
+                <span class="text-cyan-400">$this</span>-&gt;securityGuard-&gt;enforceRBAC($data-&gt;user);
+              </div>
+              <div class="pl-12 text-slate-300 mt-1">
+                <span class="text-gray-500">// 2. Execute High-Speed Query Pipeline</span>
+              </div>
+              <div class="pl-12 text-slate-300">
+                $record = <span class="text-cyan-400">$this</span>-&gt;repository-&gt;createAtomic($data);
+              </div>
+              <div class="pl-12 text-slate-300 mt-1">
+                <span class="text-gray-500">// 3. Broadcast to Reactive Vue 3 Client</span>
+              </div>
+              <div class="pl-12 text-slate-300">
+                <span class="text-cyan-400">$this</span>-&gt;eventDispatcher-&gt;dispatchToFrontend($record);
+              </div>
+              <div class="pl-12 text-emerald-400 mt-1">
+                <span class="text-violet-400">return</span> <span class="text-amber-300">Response::json</span>([<span class="text-emerald-300">'status'</span> =&gt; <span class="text-cyan-300">200</span>, <span class="text-emerald-300">'payload'</span> =&gt; $record]);
+              </div>
+              <div class="pl-8 text-gray-400">});</div>
+              <div class="pl-4">}</div>
+              <div>}</div>
+            </div>
+
+            <!-- Terminal Interactive Footer Status -->
+            <div class="bg-[#111827] px-4 py-2.5 border-t border-gray-800 flex items-center justify-between text-xs text-gray-400 font-mono">
+              <div class="flex items-center gap-2">
+                <CheckCircle2 class="w-3.5 h-3.5 text-emerald-400" />
+                <span>REST API • OWASP Secure • ACID</span>
+              </div>
+              <div class="text-gray-500">PHP 8+ • Vue 3 • MySQL</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { ArrowRight, FileDown, Terminal, CheckCircle2, CheckCircle, MapPin, AppWindow, Server, Layout, Sparkles, Shield, Zap } from 'lucide-vue-next';
+import { portfolioData } from '../data/portfolioData';
+
+const getStatIcon = (name) => {
+  switch (name) {
+    case 'AppWindow': return AppWindow;
+    case 'Server': return Server;
+    case 'Layout': return Layout;
+    case 'Sparkles': return Sparkles;
+    case 'Shield': return Shield;
+    case 'Zap': return Zap;
+    default: return Server;
+  }
+};
+</script>
