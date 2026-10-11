@@ -13,6 +13,7 @@
     <!-- Main Content Container with Staggered Visual Flow -->
     <main class="flex-grow relative z-10">
       <HeroSection />
+      <ExperienceSection />
       <SkillsSection />
       <ProjectsSection />
     </main>
@@ -29,6 +30,7 @@ import ParticleCanvas from './components/ParticleCanvas.vue';
 import Navbar from './components/Navbar.vue';
 import HeroSection from './components/HeroSection.vue';
 import SkillsSection from './components/SkillsSection.vue';
+import ExperienceSection from './components/ExperienceSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 import FooterSection from './components/FooterSection.vue';
 

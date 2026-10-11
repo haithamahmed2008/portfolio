@@ -2,6 +2,7 @@
   "nav": {
     "about": "About",
     "skills": "Skills",
+    "experience": "Experience",
     "projects": "Projects",
     "contact": "Contact",
     "downloadResume": "Download Resume"
@@ -57,6 +58,61 @@
       "ai": {
         "title": "AI Workflows, Security & DevOps",
         "description": "Modern AI-assisted development (Cursor, Claude, Copilot, Gemini) combined with OWASP web security (Sanctum/JWT, RBAC) and Git CI/CD deployment."
+      }
+    }
+  },
+  "experience": {
+    "badge": "Career Trajectory & Track Record",
+    "title": "Professional Engineering Experience",
+    "subtitle": "Over 6 years of progressive engineering leadership, architecting mission-critical platforms, modernizing legacy systems, and accelerating shipping velocity with AI workflows.",
+    "present": "Present",
+    "responsibilities": "Key Contributions & Impact",
+    "techUsed": "Technologies & Stack",
+    "roles": {
+      "freelance": {
+        "role": "Freelance Full-Stack & AI Engineer",
+        "company": "Independent Engineering Consultant",
+        "period": "Jun 2025 - Present",
+        "location": "Sana'a, Yemen · Remote / Full-Stack",
+        "type": "Full-Time",
+        "highlights": [
+          "Engineered modular cloud POS and ERP platforms in Laravel, CodeIgniter, and Vue 3 with barcode scanning and instant stock reconciliation.",
+          "Applied AI workflows (Cursor, Claude, Copilot) to accelerate feature shipping, automated edge testing, and code refactoring.",
+          "Architected secure RESTful APIs with Sanctum/JWT authentication, RBAC authorization, and OWASP security compliance."
+        ]
+      },
+      "gtg": {
+        "role": "Assistant to Head of Commercial Sector & IT Specialist",
+        "company": "GTG Trading Group",
+        "period": "Jan 2024 - Sep 2025",
+        "location": "Sana'a, Yemen · On-site",
+        "type": "Enterprise",
+        "highlights": [
+          "Optimized commercial automation platforms and internal data workflows to boost operational throughput.",
+          "Authored complex SQL queries and maintained MySQL database integrity for commercial intelligence reports."
+        ]
+      },
+      "school": {
+        "role": "IT Specialist & Systems Administrator",
+        "company": "Modern Arab Generation International School",
+        "period": "Sep 2019 - Apr 2023",
+        "location": "Kuala Lumpur, Malaysia · On-site",
+        "type": "Academic",
+        "highlights": [
+          "Administered institutional LMS databases and core academic IT infrastructure serving staff and students.",
+          "Automated support workflows via ticketing platforms and enforced secure user access control."
+        ]
+      },
+      "dot": {
+        "role": "Web Developer",
+        "company": "Dot Design",
+        "period": "Aug 2014 - Sep 2017",
+        "location": "Sana'a, Yemen · On-site",
+        "type": "Agency",
+        "highlights": [
+          "Developed and launched responsive client portals and MVC applications using Laravel, CodeIgniter, and JavaScript.",
+          "Modeled relational MySQL databases with optimized indexes, queries, and stored routines."
+        ]
       }
     }
   },

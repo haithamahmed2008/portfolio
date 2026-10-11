@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="relative pt-32 pb-20 lg:pt-36 lg:pb-28 overflow-hidden">
+  <section id="about" class="relative pt-36 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
     <!-- Ambient Background Glows with Animation -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-cyan-500/10 dark:bg-cyan-500/10 rounded-full blur-[150px] pointer-events-none animate-pulse-glow"></div>
     <div class="absolute top-1/3 right-10 w-[500px] h-[500px] bg-violet-600/10 dark:bg-violet-600/10 rounded-full blur-[150px] pointer-events-none animate-pulse-glow" style="animation-delay: 2s;"></div>
