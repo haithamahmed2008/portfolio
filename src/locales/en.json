@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "downloadResume": "Download Resume"
+  },
+  "hero": {
+    "badge": "Available for Senior Engineering Roles",
+    "location": "Sana'a, Yemen",
+    "titlePrefix": "Engineering Scalable,",
+    "titleGradient": "High-Performance Web Applications",
+    "titleSuffix": "Powered by Clean Architecture & AI.",
+    "roleTag": "Senior Full-Stack & AI Engineer",
+    "experience": "6+ Years",
+    "summary": "Results-driven Full Stack Software Engineer with deep expertise in modern PHP ecosystems (Laravel, CodeIgniter), Vue.js (Vue 3, Pinia), and scalable relational database architecture (MySQL, SQL Server). Specializing in building high-performance cloud web applications, robust RESTful APIs, and Clean Code/SOLID architectures—accelerated with modern AI workflows.",
+    "exploreProjects": "Explore Live Projects",
+    "downloadCv": "Download Resume PDF",
+    "terminalHeader": "HaithmMalek::FullStackEngineer.php",
+    "terminalBadge": "SOLID & Clean",
+    "terminalComment": "// Scalable Full-Stack Architecture Service",
+    "terminalFooterLeft": "REST API • OWASP Secure • ACID",
+    "terminalFooterRight": "PHP 8+ • Vue 3 • MySQL",
+    "stats": {
+      "exp": "Engineering Experience",
+      "stack": "Full-Stack Tech Stack",
+      "arch": "Architecture Quality",
+      "velocity": "Delivery Velocity"
+    }
+  },
+  "skills": {
+    "badge": "Core Engineering Competencies",
+    "title": "Specialized Skill Matrix & Stack",
+    "subtitle": "Battle-tested in demanding enterprise production environments with high transaction volumes, real-time POS processing, and clean maintainability.",
+    "domainTag": "DOMAIN",
+    "stackTitle": "Production Stack",
+    "levels": {
+      "expert": "Expert",
+      "senior": "Senior",
+      "advanced": "Advanced",
+      "mastery": "Mastery"
+    },
+    "domains": {
+      "backend": {
+        "title": "Backend Engineering & Architecture",
+        "description": "Scalable, decoupled backend architectures and high-throughput enterprise RESTful APIs built with OOP design patterns, Clean Architecture, and SOLID principles."
+      },
+      "frontend": {
+        "title": "Frontend Engineering & UI/UX",
+        "description": "Fluid, responsive, and high-performance user interfaces crafted with Vue 3 (Composition API), Pinia state management, and modern component systems."
+      },
+      "database": {
+        "title": "Database Design & Performance",
+        "description": "Relational schema modeling, index tuning, transaction integrity (ACID), and query optimization for high-throughput business data operations."
+      },
+      "ai": {
+        "title": "AI Workflows, Security & DevOps",
+        "description": "Modern AI-assisted development (Cursor, Claude, Copilot, Gemini) combined with OWASP web security (Sanctum/JWT, RBAC) and Git CI/CD deployment."
+      }
+    }
+  },
+  "projects": {
+    "badge": "Deployed Production Systems",
+    "title": "Featured Full-Stack Web Applications",
+    "subtitle": "A selection of live enterprise platforms, real-time cloud web applications, and AI data systems engineered from database to reactive UI.",
+    "nodesBadge": "Live Cloud Deployments",
+    "liveProd": "LIVE PROD",
+    "stackLabel": "Stack:",
+    "databaseLabel": "Database:",
+    "launchPrompt": "Launch System",
+    "items": {
+      "saeedbawazir": {
+        "title": "Saeed Bawazir Group Enterprise Platform",
+        "badge": "Commercial Portal",
+        "tagline": "High-scale multi-tier corporate portal, wholesale product catalog, and logistics ordering management platform."
+      },
+      "daralamiratHrms": {
+        "title": "Dar Al-Amirat Enterprise HRMS Platform",
+        "badge": "HRMS & Workforce",
+        "tagline": "Comprehensive human resources platform managing organizational workforce structure, Saudization/Nitaqat compliance, document expiry alerts, and payroll rotas."
+      },
+      "daralamiratAppointment": {
+        "title": "Dar Al-Amirat Real-Time Booking & Queue System",
+        "badge": "Real-Time Scheduling",
+        "tagline": "Dynamic appointment management system featuring live queue tracking, multi-specialist slot reservations, and automated customer scheduling."
+      },
+      "daralamiratPos": {
+        "title": "Dar Al-Amirat Cloud Retail Platform",
+        "badge": "Retail Cloud Engine",
+        "tagline": "High-performance web application with instant catalog search, camera-based barcode scanning, real-time cart state management, and thermal printer APIs."
+      },
+      "daralamiratProd": {
+        "title": "Dar Al-Amirat Product Market Price Analyzer",
+        "badge": "AI Market Intelligence",
+        "tagline": "Intelligent analytics platform scraping and benchmarking cross-retailer product prices, ratings, discount spreads, and AI-driven pricing recommendations."
+      }
+    }
+  },
+  "footer": {
+    "ctaBadge": "Let's connect & build",
+    "ctaTitle": "Ready to Engineer Scalable Systems?",
+    "ctaSubtitle": "Available for full-stack & AI engineering roles, high-performance web applications, and technical consulting.",
+    "sendMessage": "Send Message",
+    "downloadResume": "Download Resume PDF",
+    "bio": "Specializing in high-throughput enterprise systems, cloud POS/ERP solutions, Clean Code, and AI development workflows.",
+    "directContact": "Direct Contact",
+    "onlineProfiles": "Online Profiles",
+    "rights": "All rights reserved. Built with Vue 3, Vite & Tailwind CSS.",
+    "status": "100% Production Ready"
+  }
+}

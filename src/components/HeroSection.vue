@@ -14,23 +14,23 @@
           <div class="flex flex-wrap items-center gap-3 mb-6">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 text-xs font-semibold backdrop-blur-md shadow-inner shadow-emerald-500/20">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>{{ portfolioData.badge }}</span>
+              <span>{{ t('hero.badge') }}</span>
             </div>
 
             <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-900/80 border border-gray-800 text-gray-300 text-xs font-mono">
               <MapPin class="w-3.5 h-3.5 text-cyan-400" />
-              <span>{{ portfolioData.location }}</span>
+              <span>{{ t('hero.location') }}</span>
             </div>
           </div>
 
           <!-- Strong, Broad Full-Stack Headline -->
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.18] mb-6">
-            Engineering Scalable, <br class="hidden sm:block" />
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.22] mb-6">
+            {{ t('hero.titlePrefix') }} <br class="hidden sm:block" />
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-violet-400">
-              High-Performance Web Applications
+              {{ t('hero.titleGradient') }}
             </span>
             <br />
-            Powered by Clean Architecture &amp; AI.
+            {{ t('hero.titleSuffix') }}
           </h1>
 
           <!-- Personal Headshot Card & Bio Combined -->
@@ -47,20 +47,20 @@
             </div>
             <div>
               <div class="flex items-center gap-2">
-                <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">Senior Full-Stack &amp; AI Engineer</span>
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">{{ t('hero.roleTag') }}</span>
                 <span class="text-gray-500">•</span>
-                <span class="text-xs font-mono text-gray-400">10+ Years</span>
+                <span class="text-xs font-mono text-gray-400">{{ t('hero.experience') }}</span>
               </div>
               <p class="text-sm sm:text-[15px] text-gray-300 leading-relaxed mt-1.5 font-normal">
-                {{ portfolioData.summary }}
+                {{ t('hero.summary') }}
               </p>
             </div>
           </div>
 
-          <!-- Core Metrics Highlight Row with Real Icons -->
+          <!-- Core Metrics Highlight Row -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mb-8">
             <div 
-              v-for="(stat, idx) in portfolioData.stats" 
+              v-for="(stat, idx) in statsList" 
               :key="idx" 
               class="bg-[#111827]/80 border border-gray-800 rounded-xl p-3.5 backdrop-blur-md transition-all duration-300 hover:border-gray-700 flex flex-col justify-between"
             >
@@ -68,10 +68,10 @@
                 <div class="text-lg sm:text-xl font-black text-white font-mono bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
                   {{ stat.value }}
                 </div>
-                <component :is="getStatIcon(stat.icon)" class="w-4 h-4 text-gray-400" />
+                <component :is="stat.iconComp" class="w-4 h-4 text-gray-400" />
               </div>
               <div class="text-[11px] sm:text-xs text-gray-400 mt-1.5 font-medium leading-tight">
-                {{ stat.label }}
+                {{ t(stat.labelKey) }}
               </div>
             </div>
           </div>
@@ -82,8 +82,8 @@
               href="#projects" 
               class="w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm sm:text-base shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
-              <span>Explore Live Projects</span>
-              <ArrowRight class="w-4 h-4 text-cyan-200" />
+              <span>{{ t('hero.exploreProjects') }}</span>
+              <ArrowRight class="w-4 h-4 text-cyan-200 rtl:rotate-180" />
             </a>
 
             <a 
@@ -92,14 +92,14 @@
               class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#111827] border border-gray-700 hover:border-cyan-500/50 text-gray-200 hover:text-white font-medium text-sm sm:text-base hover:bg-gray-800/80 transition-all duration-300"
             >
               <FileDown class="w-4 h-4 text-cyan-400" />
-              <span>Download Resume PDF</span>
+              <span>{{ t('hero.downloadCv') }}</span>
             </a>
           </div>
         </div>
 
-        <!-- Right Column: Interactive Code Terminal & Tech Showcase -->
-        <div class="lg:col-span-5 w-full">
-          <div class="relative rounded-2xl bg-[#0E1424] border border-gray-800 shadow-2xl overflow-hidden group hover:border-cyan-500/40 transition-all duration-500">
+        <!-- Right Column: Interactive Code Terminal & Tech Showcase (LTR Enforced for Code) -->
+        <div class="lg:col-span-5 w-full" dir="ltr">
+          <div class="relative rounded-2xl bg-[#0E1424] border border-gray-800 shadow-2xl overflow-hidden group hover:border-cyan-500/40 transition-all duration-500 text-left">
             
             <!-- Terminal Header -->
             <div class="bg-[#151D30] px-4 py-3 border-b border-gray-800 flex items-center justify-between">
@@ -110,16 +110,16 @@
               </div>
               <div class="text-xs font-mono text-gray-300 flex items-center gap-2">
                 <Terminal class="w-3.5 h-3.5 text-cyan-400" />
-                <span>HaithmMalek::FullStackEngineer.php</span>
+                <span>{{ t('hero.terminalHeader') }}</span>
               </div>
               <div class="text-[10px] font-mono text-cyan-400 bg-cyan-950/70 px-2 py-0.5 rounded border border-cyan-800/50">
-                SOLID &amp; Clean
+                {{ t('hero.terminalBadge') }}
               </div>
             </div>
 
-            <!-- Terminal Code Window with Authentic Full-Stack Service Pattern -->
+            <!-- Terminal Code Window -->
             <div class="p-5 font-mono text-xs sm:text-[13px] leading-relaxed overflow-x-auto text-gray-300">
-              <div class="text-gray-500">// Scalable Full-Stack Architecture Service</div>
+              <div class="text-gray-500">{{ t('hero.terminalComment') }}</div>
               <div class="text-violet-400">namespace <span class="text-white">App\Services\Core;</span></div>
               <div class="text-violet-400 mt-2">class <span class="text-amber-300">ApplicationEngine</span> <span class="text-violet-400">implements</span> <span class="text-cyan-300">FullStackInterface</span></div>
               <div>{</div>
@@ -160,9 +160,9 @@
             <div class="bg-[#111827] px-4 py-2.5 border-t border-gray-800 flex items-center justify-between text-xs text-gray-400 font-mono">
               <div class="flex items-center gap-2">
                 <CheckCircle2 class="w-3.5 h-3.5 text-emerald-400" />
-                <span>REST API • OWASP Secure • ACID</span>
+                <span>{{ t('hero.terminalFooterLeft') }}</span>
               </div>
-              <div class="text-gray-500">PHP 8+ • Vue 3 • MySQL</div>
+              <div class="text-gray-500">{{ t('hero.terminalFooterRight') }}</div>
             </div>
 
           </div>
@@ -174,18 +174,16 @@
 </template>
 
 <script setup>
-import { ArrowRight, FileDown, Terminal, CheckCircle2, CheckCircle, MapPin, AppWindow, Server, Layout, Sparkles, Shield, Zap } from 'lucide-vue-next';
+import { useI18n } from 'vue-i18n';
+import { ArrowRight, FileDown, Terminal, CheckCircle2, CheckCircle, MapPin, Server, Sparkles, Shield, Zap } from 'lucide-vue-next';
 import { portfolioData } from '../data/portfolioData';
 
-const getStatIcon = (name) => {
-  switch (name) {
-    case 'AppWindow': return AppWindow;
-    case 'Server': return Server;
-    case 'Layout': return Layout;
-    case 'Sparkles': return Sparkles;
-    case 'Shield': return Shield;
-    case 'Zap': return Zap;
-    default: return Server;
-  }
-};
+const { t } = useI18n();
+
+const statsList = [
+  { labelKey: 'hero.stats.exp', value: '6+ Yrs', iconComp: Sparkles },
+  { labelKey: 'hero.stats.stack', value: 'PHP / Vue / SQL', iconComp: Server },
+  { labelKey: 'hero.stats.arch', value: 'Clean & SOLID', iconComp: Shield },
+  { labelKey: 'hero.stats.velocity', value: 'AI-Accelerated', iconComp: Zap },
+];
 </script>

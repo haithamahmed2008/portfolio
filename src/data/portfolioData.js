@@ -17,7 +17,7 @@ export const portfolioData = {
   summary: "Results-driven Full Stack Software Engineer with deep expertise in modern PHP ecosystems (Laravel, CodeIgniter), Vue.js (Vue 3, Pinia), and scalable relational database architecture (MySQL, SQL Server). Specializing in building high-performance cloud web applications, robust RESTful APIs, and Clean Code/SOLID architectures—accelerated with modern AI workflows.",
   
   stats: [
-    { label: "Engineering Experience", value: "10+ Yrs", icon: "Sparkles" },
+    { label: "Engineering Experience", value: "6+ Yrs", icon: "Sparkles" },
     { label: "Full-Stack Tech Stack", value: "PHP / Vue / SQL", icon: "Server" },
     { label: "Architecture Quality", value: "Clean & SOLID", icon: "Shield" },
     { label: "Delivery Velocity", value: "AI-Accelerated", icon: "Zap" },

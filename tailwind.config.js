@@ -19,6 +19,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'Outfit', 'system-ui', 'sans-serif'],
+        arabic: ['Cairo', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['Fira Code', 'JetBrains Mono', 'monospace'],
       },
       animation: {

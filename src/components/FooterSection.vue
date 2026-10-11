@@ -10,12 +10,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           <div class="lg:col-span-8">
-            <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Let's connect &amp; build</span>
+            <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">{{ t('footer.ctaBadge') }}</span>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mt-2">
-              Ready to Engineer Scalable Systems?
+              {{ t('footer.ctaTitle') }}
             </h2>
             <p class="text-gray-400 mt-3 text-sm sm:text-base max-w-2xl leading-relaxed">
-              Available for full-stack &amp; AI engineering roles, ERP/POS architecture, and high-performance web applications.
+              {{ t('footer.ctaSubtitle') }}
             </p>
           </div>
 
@@ -25,7 +25,7 @@
               class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
               <Mail class="w-4 h-4" />
-              <span>Send Message</span>
+              <span>{{ t('footer.sendMessage') }}</span>
             </a>
 
             <a 
@@ -34,7 +34,7 @@
               class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1F2937] hover:bg-gray-800 border border-gray-700 text-gray-200 hover:text-white font-medium text-sm transition-all"
             >
               <Download class="w-4 h-4 text-cyan-400" />
-              <span>Download Resume PDF</span>
+              <span>{{ t('footer.downloadResume') }}</span>
             </a>
           </div>
 
@@ -55,31 +55,31 @@
               />
             </div>
             <div>
-              <div class="font-bold text-white text-base">Haithm Malek</div>
-              <div class="text-xs text-gray-400 font-mono">Full-Stack &amp; AI Software Engineer</div>
+              <div class="font-bold text-white text-base">{{ portfolioData.name }}</div>
+              <div class="text-xs text-gray-400 font-mono">{{ t('hero.roleTag') }}</div>
             </div>
           </div>
           <p class="text-gray-400 text-xs sm:text-sm max-w-sm leading-relaxed mb-4">
-            Specializing in high-throughput enterprise systems, cloud POS/ERP solutions, Clean Code, and AI development workflows.
+            {{ t('footer.bio') }}
           </p>
           <div class="flex items-center gap-2 text-xs text-gray-400">
             <MapPin class="w-4 h-4 text-cyan-400" />
-            <span>{{ portfolioData.location }}</span>
+            <span>{{ t('hero.location') }}</span>
           </div>
         </div>
 
         <!-- Col 2: Direct Contact -->
         <div>
-          <h4 class="text-xs font-mono uppercase text-gray-400 tracking-wider mb-4">Direct Contact</h4>
+          <h4 class="text-xs font-mono uppercase text-gray-400 tracking-wider mb-4">{{ t('footer.directContact') }}</h4>
           <ul class="space-y-2.5 text-xs sm:text-sm text-gray-300">
             <li>
-              <a :href="'mailto:' + portfolioData.contact.email" class="hover:text-cyan-400 transition-colors flex items-center gap-2">
+              <a :href="'mailto:' + portfolioData.contact.email" class="hover:text-cyan-400 transition-colors flex items-center gap-2" dir="ltr">
                 <Mail class="w-3.5 h-3.5 text-cyan-400" />
                 <span>{{ portfolioData.contact.email }}</span>
               </a>
             </li>
             <li>
-              <a :href="'tel:' + portfolioData.contact.phone" class="hover:text-cyan-400 transition-colors flex items-center gap-2">
+              <a :href="'tel:' + portfolioData.contact.phone" class="hover:text-cyan-400 transition-colors flex items-center gap-2" dir="ltr">
                 <Phone class="w-3.5 h-3.5 text-emerald-400" />
                 <span>{{ portfolioData.contact.phone }}</span>
               </a>
@@ -89,7 +89,7 @@
 
         <!-- Col 3: Socials & Profiles -->
         <div>
-          <h4 class="text-xs font-mono uppercase text-gray-400 tracking-wider mb-4">Online Profiles</h4>
+          <h4 class="text-xs font-mono uppercase text-gray-400 tracking-wider mb-4">{{ t('footer.onlineProfiles') }}</h4>
           <div class="flex items-center gap-3">
             <a 
               :href="portfolioData.socials.github" 
@@ -117,10 +117,10 @@
       <!-- Bottom Copyright Bar -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
         <div>
-          &copy; {{ new Date().getFullYear() }} Haithm Malek. Built with Vue 3 &amp; Tailwind CSS.
+          &copy; {{ new Date().getFullYear() }} {{ portfolioData.name }}. {{ t('footer.rights') }}
         </div>
         <div class="flex items-center gap-4 font-mono text-[11px]">
-          <span class="text-emerald-400">&bull; 100% Production Ready</span>
+          <span class="text-emerald-400">&bull; {{ t('footer.status') }}</span>
         </div>
       </div>
 
@@ -129,6 +129,9 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
 import { Mail, Phone, MapPin, Download, Github, Linkedin } from 'lucide-vue-next';
 import { portfolioData } from '../data/portfolioData';
+
+const { t } = useI18n();
 </script>
