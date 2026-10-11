@@ -57,7 +57,7 @@
             </div>
           </div>
 
-          <!-- Core Metrics Highlight Row with Hover Lift -->
+          <!-- Core Metrics Highlight Row with Professional Engineering Icons -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mb-8">
             <div 
               v-for="(stat, idx) in statsList" 
@@ -178,15 +178,15 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n';
-import { ArrowRight, FileDown, Terminal, CheckCircle2, CheckCircle, MapPin, Server, Sparkles, Shield, Zap } from 'lucide-vue-next';
+import { ArrowRight, FileDown, Terminal, CheckCircle2, CheckCircle, MapPin, Server, Award, Shield, Zap } from 'lucide-vue-next';
 import { portfolioData } from '../data/portfolioData';
 
 const { t } = useI18n();
 
 const statsList = [
-  { labelKey: 'hero.stats.exp', value: '6+ Yrs', iconComp: Sparkles },
+  { labelKey: 'hero.stats.exp', value: '6+ Yrs', iconComp: Award },
   { labelKey: 'hero.stats.stack', value: 'PHP / Vue / SQL', iconComp: Server },
   { labelKey: 'hero.stats.arch', value: 'Clean & SOLID', iconComp: Shield },
-  { labelKey: 'hero.stats.velocity', value: 'AI-Accelerated', iconComp: Zap },
+  { labelKey: 'hero.stats.velocity', value: 'High-Velocity', iconComp: Zap },
 ];
 </script>

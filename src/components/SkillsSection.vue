@@ -141,11 +141,11 @@ const skillsList = [
     color: 'from-amber-500 to-rose-600',
     borderGlow: 'group-hover:border-amber-500/50',
     technologies: [
-      { name: 'Cursor IDE', levelKey: 'mastery', icon: 'ai' },
+      { name: 'Cursor IDE', levelKey: 'mastery', icon: 'cursor' },
       { name: 'Claude 3.5 Sonnet', levelKey: 'mastery', icon: 'claude' },
       { name: 'GitHub Copilot', levelKey: 'expert', icon: 'copilot' },
-      { name: 'OWASP Security', levelKey: 'expert', icon: 'shield' },
       { name: 'Git & GitHub PRs', levelKey: 'expert', icon: 'git' },
+      { name: 'OWASP Security', levelKey: 'expert', icon: 'shield' },
       { name: 'Linux & Cloud', levelKey: 'senior', icon: 'cloud' }
     ]
   }

@@ -190,7 +190,7 @@ const projectsList = [
     titleKey: "projects.items.daralamiratProd.title",
     badgeKey: "projects.items.daralamiratProd.badge",
     taglineKey: "projects.items.daralamiratProd.tagline",
-    techIcons: ["php", "laravel", "vue", "ai", "mysql"],
+    techIcons: ["php", "laravel", "vue", "mysql", "tailwind"],
     frameworks: ["Laravel", "Vue 3"],
     database: ["MySQL Cluster"]
   }

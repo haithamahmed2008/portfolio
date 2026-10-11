@@ -17,10 +17,10 @@ export const portfolioData = {
   summary: "Results-driven Full Stack Software Engineer with deep expertise in modern PHP ecosystems (Laravel, CodeIgniter), Vue.js (Vue 3, Pinia), and scalable relational database architecture (MySQL, SQL Server). Specializing in building high-performance cloud web applications, robust RESTful APIs, and Clean Code/SOLID architectures—accelerated with modern AI workflows.",
   
   stats: [
-    { label: "Engineering Experience", value: "6+ Yrs", icon: "Sparkles" },
+    { label: "Engineering Experience", value: "6+ Yrs", icon: "Award" },
     { label: "Full-Stack Tech Stack", value: "PHP / Vue / SQL", icon: "Server" },
     { label: "Architecture Quality", value: "Clean & SOLID", icon: "Shield" },
-    { label: "Delivery Velocity", value: "AI-Accelerated", icon: "Zap" },
+    { label: "Delivery Velocity", value: "High-Velocity", icon: "Zap" },
   ],
 
   skills: [
@@ -70,18 +70,18 @@ export const portfolioData = {
       ]
     },
     {
-      domain: "AI Workflows, Security & DevOps",
+      domain: "DevOps, Security & Cloud Architecture",
       icon: "Cpu",
       color: "from-amber-500 to-rose-600",
       borderGlow: "group-hover:border-amber-500/50",
-      description: "Modern AI-assisted development (Cursor, Claude, Copilot, Gemini) combined with OWASP web security (Sanctum/JWT, RBAC) and Git CI/CD deployment.",
+      description: "Automated development workflows combined with OWASP web security (Sanctum/JWT, RBAC), Linux server management, and Git CI/CD deployment.",
       technologies: [
-        { name: "Cursor IDE & AI Agents", level: "Mastery", icon: "ai" },
-        { name: "Claude 3.5 & Copilot", level: "Mastery", icon: "claude" },
-        { name: "OWASP & Web Security", level: "Expert", icon: "shield" },
-        { name: "Auth (Sanctum / JWT)", level: "Expert", icon: "copilot" },
         { name: "Git & GitHub PRs", level: "Expert", icon: "git" },
-        { name: "Linux / Nginx / Apache", level: "Senior", icon: "cloud" }
+        { name: "OWASP & Web Security", level: "Expert", icon: "shield" },
+        { name: "Auth (Sanctum / JWT)", level: "Expert", icon: "code" },
+        { name: "Linux / Nginx / Apache", level: "Senior", icon: "cloud" },
+        { name: "Docker Containerization", level: "Advanced", icon: "docker" },
+        { name: "REST / Hardware APIs", level: "Senior", icon: "api" }
       ]
     }
   ],
@@ -94,7 +94,7 @@ export const portfolioData = {
       image: "./images/preview-saeedbawazir.png",
       fallbackImage: "./images/preview-saeedbawazir.svg",
       badge: "Commercial Portal",
-      tagline: "High-scale multi-tier corporate portal, product catalog, and wholesale logistics ordering management platform.",
+      tagline: "High-scale multi-tier corporate portal, wholesale product catalog, and logistics ordering management platform.",
       techIcons: ["php", "laravel", "vue", "mysql", "tailwind"],
       languages: ["PHP", "JavaScript"],
       frameworks: ["Laravel", "Vue.js"],
@@ -153,14 +153,14 @@ export const portfolioData = {
       url: "https://prod.daralamiratpos.de",
       image: "./images/preview-daralamirat-prod.png",
       fallbackImage: "./images/preview-daralamirat-prod.svg",
-      badge: "AI Market Intelligence",
-      tagline: "Intelligent analytics platform scraping and benchmarking cross-retailer product prices, ratings, discount spreads, and AI-driven pricing recommendations.",
-      techIcons: ["php", "laravel", "vue", "ai", "mysql"],
+      badge: "Market Intelligence",
+      tagline: "Intelligent analytics platform scraping and benchmarking cross-retailer product prices, ratings, discount spreads, and automated pricing recommendations.",
+      techIcons: ["php", "laravel", "vue", "mysql", "tailwind"],
       languages: ["PHP", "JavaScript"],
       frameworks: ["Laravel", "Vue 3"],
       styling: ["Tailwind CSS", "Dark UI"],
       database: ["MySQL Cluster"],
-      tools: ["AI Competitor Engine", "Data Aggregation", "Redis"]
+      tools: ["Competitor Engine", "Data Aggregation", "Redis"]
     }
   ]
 };
