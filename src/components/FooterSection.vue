@@ -20,6 +20,18 @@
           </div>
 
           <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
+            <!-- Direct WhatsApp Quick Chat -->
+            <a 
+              :href="'https://wa.me/' + portfolioData.contact.phone.replace(/[^0-9]/g, '') + '?text=Hi%20Haithm,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect.'" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-lg shadow-emerald-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            >
+              <MessageCircle class="w-4 h-4" />
+              <span>{{ t('footer.whatsappChat') }}</span>
+            </a>
+
+            <!-- Send Direct Email -->
             <a 
               :href="'mailto:' + portfolioData.contact.email" 
               class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-600 to-violet-600 text-white font-semibold text-sm shadow-lg shadow-cyan-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
@@ -28,6 +40,7 @@
               <span>{{ t('footer.sendMessage') }}</span>
             </a>
 
+            <!-- Download Resume -->
             <a 
               :href="portfolioData.resumePath" 
               download="Haithm_Malek_Resume.pdf"
@@ -68,19 +81,38 @@
           </div>
         </div>
 
-        <!-- Col 2: Direct Contact -->
+        <!-- Col 2: Direct Contact & Copy Email -->
         <div>
           <h4 class="text-xs font-mono uppercase text-slate-400 dark:text-gray-400 tracking-wider mb-4">{{ t('footer.directContact') }}</h4>
-          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 dark:text-gray-300">
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-gray-300">
             <li>
-              <a :href="'mailto:' + portfolioData.contact.email" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-2" dir="ltr">
-                <Mail class="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" />
-                <span>{{ portfolioData.contact.email }}</span>
-              </a>
+              <div class="flex items-center gap-2" dir="ltr">
+                <a :href="'mailto:' + portfolioData.contact.email" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-1.5 truncate">
+                  <Mail class="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 flex-shrink-0" />
+                  <span class="truncate">{{ portfolioData.contact.email }}</span>
+                </a>
+                <button 
+                  @click="copyEmail" 
+                  class="p-1 rounded-md bg-slate-200 dark:bg-gray-800 hover:bg-cyan-500/20 text-slate-600 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-300 transition-all flex-shrink-0"
+                  :title="copied ? t('footer.emailCopied') : t('footer.copyEmail')"
+                >
+                  <Check v-if="copied" class="w-3.5 h-3.5 text-emerald-500 animate-bounce" />
+                  <Copy v-else class="w-3.5 h-3.5" />
+                </button>
+              </div>
+              <span v-if="copied" class="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono block mt-1">
+                {{ t('footer.emailCopied') }}
+              </span>
             </li>
             <li>
-              <a :href="'tel:' + portfolioData.contact.phone" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-2" dir="ltr">
-                <Phone class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+              <a 
+                :href="'https://wa.me/' + portfolioData.contact.phone.replace(/[^0-9]/g, '')" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center gap-2" 
+                dir="ltr"
+              >
+                <MessageCircle class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                 <span>{{ portfolioData.contact.phone }}</span>
               </a>
             </li>
@@ -94,7 +126,7 @@
             <a 
               :href="portfolioData.socials.github" 
               target="_blank" 
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" 
               class="w-10 h-10 rounded-xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 flex items-center justify-center text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:border-cyan-500/50 hover:bg-slate-50 dark:hover:bg-gray-800 transition-all shadow-sm"
               aria-label="GitHub Profile"
             >
@@ -103,7 +135,7 @@
             <a 
               :href="portfolioData.socials.linkedin" 
               target="_blank" 
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" 
               class="w-10 h-10 rounded-xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 flex items-center justify-center text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:border-cyan-500/50 hover:bg-slate-50 dark:hover:bg-gray-800 transition-all shadow-sm"
               aria-label="LinkedIn Profile"
             >
@@ -129,9 +161,19 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { Mail, Phone, MapPin, Download, Github, Linkedin } from 'lucide-vue-next';
+import { Mail, MessageCircle, MapPin, Download, Github, Linkedin, Copy, Check } from 'lucide-vue-next';
 import { portfolioData } from '../data/portfolioData';
 
 const { t } = useI18n();
+const copied = ref(false);
+
+const copyEmail = () => {
+  navigator.clipboard.writeText(portfolioData.contact.email);
+  copied.value = true;
+  setTimeout(() => {
+    copied.value = false;
+  }, 2500);
+};
 </script>
