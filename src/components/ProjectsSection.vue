@@ -142,8 +142,8 @@ const projectsList = [
     titleKey: "projects.items.saeedbawazir.title",
     badgeKey: "projects.items.saeedbawazir.badge",
     taglineKey: "projects.items.saeedbawazir.tagline",
-    techIcons: ["php", "laravel", "vue", "mysql", "tailwind"],
-    frameworks: ["Laravel", "Vue.js"],
+    techIcons: ["php", "laravel", "vue", "typescript", "mysql", "tailwind"],
+    frameworks: ["Laravel", "Vue.js", "TypeScript"],
     database: ["MySQL"]
   },
   {
@@ -154,8 +154,8 @@ const projectsList = [
     titleKey: "projects.items.daralamiratHrms.title",
     badgeKey: "projects.items.daralamiratHrms.badge",
     taglineKey: "projects.items.daralamiratHrms.tagline",
-    techIcons: ["laravel", "vue", "php", "mysql", "tailwind"],
-    frameworks: ["Laravel", "Vue.js", "Pinia"],
+    techIcons: ["laravel", "vue", "typescript", "php", "mysql", "tailwind"],
+    frameworks: ["Laravel", "Vue.js", "TypeScript"],
     database: ["MySQL"]
   },
   {
@@ -167,7 +167,7 @@ const projectsList = [
     badgeKey: "projects.items.daralamiratAppointment.badge",
     taglineKey: "projects.items.daralamiratAppointment.tagline",
     techIcons: ["vue", "laravel", "javascript", "mysql", "tailwind"],
-    frameworks: ["Vue 3", "Laravel API"],
+    frameworks: ["Vue 3", "JavaScript", "Laravel API"],
     database: ["MySQL"]
   },
   {
@@ -178,8 +178,8 @@ const projectsList = [
     titleKey: "projects.items.daralamiratPos.title",
     badgeKey: "projects.items.daralamiratPos.badge",
     taglineKey: "projects.items.daralamiratPos.tagline",
-    techIcons: ["php", "codeigniter", "vue", "mysql", "tailwind"],
-    frameworks: ["CodeIgniter", "Vue 3", "Pinia"],
+    techIcons: ["php", "codeigniter", "vue", "javascript", "mysql", "tailwind"],
+    frameworks: ["CodeIgniter", "Vue 3", "JavaScript"],
     database: ["MySQL"]
   },
   {
@@ -190,8 +190,8 @@ const projectsList = [
     titleKey: "projects.items.daralamiratProd.title",
     badgeKey: "projects.items.daralamiratProd.badge",
     taglineKey: "projects.items.daralamiratProd.tagline",
-    techIcons: ["php", "laravel", "vue", "mysql", "tailwind"],
-    frameworks: ["Laravel", "Vue 3"],
+    techIcons: ["php", "laravel", "vue", "typescript", "mysql", "tailwind"],
+    frameworks: ["Laravel", "Vue 3", "TypeScript"],
     database: ["MySQL Cluster"]
   }
 ];
