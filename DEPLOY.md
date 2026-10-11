@@ -9,6 +9,7 @@ The repository is pre-configured with `base: './'` in `vite.config.js`, making i
 ## ⚡ Option 1: Deploy to Vercel (1-Click & Recommended)
 
 ### Via Vercel CLI (Fastest):
+
 ```bash
 # 1. Install or run Vercel CLI
 npx vercel
@@ -19,6 +20,7 @@ npx vercel
 ```
 
 ### Via GitHub + Vercel Dashboard:
+
 1. Push your repository to GitHub:
    ```bash
    git init
@@ -39,12 +41,13 @@ npx vercel
 You can automate deployment to GitHub Pages via GitHub Actions:
 
 1. In your repository, create `.github/workflows/deploy.yml`:
+
 ```yaml
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: read
@@ -83,12 +86,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: "./dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 ```
+
 2. In your GitHub repository settings &rarr; **Pages** &rarr; Source: Select **GitHub Actions**.
 3. Push to `main`, and your site will be live at `https://haithamahmed2008.github.io/portfolio/`.
 
@@ -97,11 +101,13 @@ jobs:
 ## 💻 Local Development
 
 To run locally in development mode:
+
 ```bash
 npm run dev
 ```
 
 To build and preview production build locally:
+
 ```bash
 npm run build
 npm run preview

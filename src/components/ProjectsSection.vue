@@ -5,20 +5,20 @@
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-800/50 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">
-            <Radio class="w-3.5 h-3.5 animate-pulse" />
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4 shadow-sm">
+            <Radio class="w-3.5 h-3.5 animate-pulse text-emerald-600 dark:text-emerald-400" />
             <span>{{ t('projects.badge') }}</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             {{ t('projects.title') }}
           </h2>
-          <p class="mt-4 text-sm sm:text-base text-gray-400 max-w-2xl leading-relaxed">
+          <p class="mt-4 text-sm sm:text-base text-slate-600 dark:text-gray-400 max-w-2xl leading-relaxed">
             {{ t('projects.subtitle') }}
           </p>
         </div>
 
-        <div class="flex items-center gap-2 font-mono text-xs text-gray-300 bg-[#111827] px-4 py-2.5 rounded-xl border border-gray-800">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <div class="flex items-center gap-2 font-mono text-xs text-slate-700 dark:text-gray-300 bg-white dark:bg-[#111827] px-4 py-2.5 rounded-xl border border-slate-200 dark:border-gray-800 shadow-sm dark:shadow-none">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-ping"></span>
           <span>{{ projectsList.length }} {{ t('projects.nodesBadge') }}</span>
         </div>
       </div>
@@ -31,12 +31,12 @@
           :href="project.url" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="group relative flex flex-col rounded-2xl bg-[#111827] border border-gray-800 overflow-hidden transition-all duration-300 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-1.5"
+          class="group relative flex flex-col rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-gray-800 overflow-hidden transition-all duration-300 hover:border-cyan-500/50 dark:hover:border-cyan-500/50 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-cyan-500/10 hover:-translate-y-1.5 shadow-sm"
         >
           <!-- Project Preview Image Container with Full Screenshot Fit -->
-          <div class="relative w-full aspect-[16/10] bg-[#070B14] border-b border-gray-800 p-2 sm:p-2.5 flex items-center justify-center overflow-hidden">
+          <div class="relative w-full aspect-[16/10] bg-slate-900 dark:bg-[#070B14] border-b border-slate-200 dark:border-gray-800 p-2 sm:p-2.5 flex items-center justify-center overflow-hidden">
             <!-- Window frame container for mockup feel -->
-            <div class="w-full h-full rounded-xl overflow-hidden bg-[#0F172A]/90 border border-gray-800/80 shadow-inner flex items-center justify-center relative group-hover:border-cyan-500/30 transition-colors">
+            <div class="w-full h-full rounded-xl overflow-hidden bg-slate-950 dark:bg-[#0F172A]/90 border border-slate-800 dark:border-gray-800/80 shadow-inner flex items-center justify-center relative group-hover:border-cyan-500/30 transition-colors">
               <img 
                 :src="project.image" 
                 :alt="t(project.titleKey)"
@@ -82,31 +82,31 @@
                 </div>
               </div>
 
-              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-cyan-400 transition-colors leading-snug">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors leading-snug">
                 {{ t(project.titleKey) }}
               </h3>
               
-              <p class="text-xs text-gray-400 mt-2 leading-relaxed line-clamp-2">
+              <p class="text-xs text-slate-600 dark:text-gray-400 mt-2 leading-relaxed line-clamp-2">
                 {{ t(project.taglineKey) }}
               </p>
             </div>
 
             <!-- Structured Tech Details -->
-            <div class="mt-5 pt-4 border-t border-gray-800/80 flex flex-col gap-2">
+            <div class="mt-5 pt-4 border-t border-slate-200 dark:border-gray-800/80 flex flex-col gap-2">
               <div class="flex items-center text-xs">
-                <span class="text-gray-500 w-24 flex-shrink-0 font-mono text-[11px]">{{ t('projects.stackLabel') }}</span>
-                <span class="text-cyan-300 font-medium truncate">{{ project.frameworks.join(', ') }}</span>
+                <span class="text-slate-400 dark:text-gray-500 w-24 flex-shrink-0 font-mono text-[11px]">{{ t('projects.stackLabel') }}</span>
+                <span class="text-cyan-700 dark:text-cyan-300 font-medium truncate">{{ project.frameworks.join(', ') }}</span>
               </div>
               <div class="flex items-center text-xs">
-                <span class="text-gray-500 w-24 flex-shrink-0 font-mono text-[11px]">{{ t('projects.databaseLabel') }}</span>
-                <span class="text-emerald-300 font-medium truncate">{{ project.database.join(', ') }}</span>
+                <span class="text-slate-400 dark:text-gray-500 w-24 flex-shrink-0 font-mono text-[11px]">{{ t('projects.databaseLabel') }}</span>
+                <span class="text-emerald-700 dark:text-emerald-300 font-medium truncate">{{ project.database.join(', ') }}</span>
               </div>
             </div>
 
             <!-- Launch Live System Prompt -->
-            <div class="mt-4 pt-3 border-t border-gray-800/50 flex items-center justify-between text-xs font-mono text-gray-400 group-hover:text-cyan-400 transition-colors">
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-gray-800/50 flex items-center justify-between text-xs font-mono text-slate-500 dark:text-gray-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
               <span class="truncate max-w-[180px]">{{ project.url.replace('https://', '') }}</span>
-              <span class="flex items-center gap-1 font-semibold text-cyan-400">
+              <span class="flex items-center gap-1 font-semibold text-cyan-600 dark:text-cyan-400">
                 <span>{{ t('projects.launchPrompt') }}</span>
                 <span class="rtl:rotate-180">&rarr;</span>
               </span>

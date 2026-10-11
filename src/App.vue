@@ -2,7 +2,7 @@
   <div 
     :dir="currentLocale === 'ar' ? 'rtl' : 'ltr'"
     :class="currentLocale === 'ar' ? 'font-arabic' : 'font-sans'"
-    class="min-h-screen bg-[#0B0F19] text-slate-100 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-300 transition-all duration-300"
+    class="min-h-screen bg-slate-50 dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-700 dark:selection:text-cyan-300 transition-colors duration-300"
   >
     <!-- Sticky Glass Navigation Header -->
     <Navbar />
