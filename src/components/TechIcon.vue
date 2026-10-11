@@ -85,6 +85,78 @@
     <!-- Cloud / Infrastructure -->
     <svg v-else-if="name === 'cloud'" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+      </svg>
+
+    <!-- TypeScript Icon -->
+    <svg v-else-if="name === 'typescript'" class="w-full h-full" viewBox="0 0 128 128">
+      <rect width="128" height="128" rx="16" fill="#3178C6"/>
+      <path fill="#FFFFFF" d="M102.5 81.3c0-3.3-1.6-6-4.9-8.1-3.2-2.1-8.2-4.1-14.8-5.9-4.7-1.3-8.2-2.8-10.4-4.5-2.2-1.7-3.3-3.9-3.3-6.6 0-3.1 1.3-5.6 3.9-7.5 2.6-1.9 6.2-2.9 10.8-2.9 4.3 0 7.8.9 10.5 2.8 2.7 1.9 4.4 4.5 5.1 7.9l12.4-5.2c-1.6-5.8-5.1-10.4-10.4-13.8-5.3-3.4-11.8-5.1-19.5-5.1-8.3 0-15.1 2.2-20.4 6.7-5.3 4.5-8 10.3-8 17.5 0 6.4 2.2 11.5 6.6 15.3 4.4 3.8 10.6 6.7 18.6 8.7 5.3 1.4 9.1 2.9 11.4 4.6 2.3 1.7 3.4 3.9 3.4 6.6 0 3.3-1.4 5.9-4.3 7.8-2.9 1.9-6.9 2.8-12.1 2.8-5.1 0-9.4-1.2-12.9-3.7-3.5-2.5-5.7-6.2-6.6-11.1l-12.8 4.7c1.7 7.7 5.7 13.7 12 18 6.3 4.3 14 6.5 23.1 6.5 9.4 0 17-2.3 22.8-6.9 5.8-4.6 8.7-10.8 8.7-18.7zm-65.7 34.2h15V52.8h17.9V39.5H21.8v13.3h15v62.7z"/>
+    </svg>
+
+    <!-- RESTful APIs Icon -->
+    <svg v-else-if="name === 'api'" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 14a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/>
+      <path d="M7 10V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"/>
+      <circle cx="9" cy="14" r="1" fill="#06B6D4"/>
+      <circle cx="15" cy="14" r="1" fill="#06B6D4"/>
+      <path d="M12 2v2"/>
+      <path d="M12 18v4"/>
+    </svg>
+
+    <!-- OOP / Clean Code Icon -->
+    <svg v-else-if="name === 'code' || name === 'oop'" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="16 18 22 12 16 6"/>
+      <polyline points="8 6 2 12 8 18"/>
+      <line x1="14" y1="4" x2="10" y2="20" stroke="#06B6D4"/>
+    </svg>
+
+    <!-- Clean Architecture / Layers Icon -->
+    <svg v-else-if="name === 'layers' || name === 'architecture'" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+      <polyline points="2 17 12 22 22 17"/>
+      <polyline points="2 12 12 17 22 12"/>
+    </svg>
+
+    <!-- HTML5 / CSS3 Icon -->
+    <svg v-else-if="name === 'html'" class="w-full h-full" viewBox="0 0 128 128">
+      <path fill="#E44D26" d="M19.3 115.8L7.8 7.3h112.4l-11.5 108.5-44.7 12.2-44.7-12.2z"/>
+      <path fill="#F16529" d="M64 118.5l36.5-10 9.7-91.2H64v101.2z"/>
+      <path fill="#EBEBEB" d="M64 53.6H46.4l-1.2-13.6H64V26.8H31.1l3.5 40.2H64V53.6zm0 37.1l-.1.1-15.3-4.1-1-11.1H34.4l1.9 21.8 27.7 7.7V90.7z"/>
+      <path fill="#FFFFFF" d="M64 53.6h17.6l-1.6 18.5-16 4.3v13.7l27.7-7.7.3-3.4 3.1-34.9.4-4.1H64v13.6zm0-26.8h32.9l.3-3.4.9-10.2H64v13.6z"/>
+    </svg>
+
+    <!-- Query Optimization / Zap Icon -->
+    <svg v-else-if="name === 'zap' || name === 'perf'" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#F59E0B" fill-opacity="0.2"/>
+    </svg>
+
+    <!-- Schema Design / Relational Model Icon -->
+    <svg v-else-if="name === 'schema' || name === 'chart'" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" stroke-width="2"/>
+      <path d="M3 9h18"/>
+      <path d="M9 21V9"/>
+      <path d="M15 9v12"/>
+    </svg>
+
+    <!-- Indexing Strategies / Database Index Icon -->
+    <svg v-else-if="name === 'database' || name === 'index'" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="12" cy="5" rx="9" ry="3"/>
+      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+      <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+      <path d="M15 15l4 4" stroke="#F59E0B" stroke-width="2.5"/>
+      <circle cx="14" cy="14" r="3" stroke="#F59E0B" stroke-width="2"/>
+    </svg>
+
+    <!-- OWASP Security / ACID Integrity / Shield Icon -->
+    <svg v-else-if="name === 'shield' || name === 'security'" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#06B6D4" fill-opacity="0.15"/>
+      <path d="M9 12l2 2 4-4"/>
+    </svg>
+
+    <!-- Docker Icon -->
+    <svg v-else-if="name === 'docker'" class="w-full h-full" viewBox="0 0 128 128">
+      <path fill="#2496ED" d="M123.6 57.3c-2.4-1.8-7.5-2.6-11.8-1.1-.9-3.8-3.1-7.2-6.5-9.6-1.5-1.1-3.2-1.9-5-2.4l-2.6-.7-.8 2.6c-1.3 4.2-.6 8.5 1.5 12-2.6 1.7-6.9 2.5-11.2 2.1H4.6c-1.6 5.8-.3 15.5 4.3 22.3 6.9 10.3 19.3 16.5 35.8 17.5 19.5 1.2 39.4-4.8 54.4-16.7 12.8-10.2 18.9-20.9 24.5-26z"/>
+      <path fill="#2496ED" d="M17.4 52.8h11.2V41.6H17.4v11.2zm14.4 0H43V41.6H31.8v11.2zm14.3 0h11.2V41.6H46.1v11.2zm14.4 0h11.2V41.6H60.5v11.2zm14.4 0h11.2V41.6H74.9v11.2zM31.8 38.6H43V27.4H31.8v11.2zm14.3 0h11.2V27.4H46.1v11.2zm14.4 0h11.2V27.4H60.5v11.2zm0-14.3h11.2V13.1H60.5v11.2z"/>
     </svg>
 
     <!-- Fallback Clean Code Token -->

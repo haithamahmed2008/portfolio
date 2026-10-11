@@ -112,7 +112,8 @@ const skillsList = [
     borderGlow: 'group-hover:border-violet-500/50',
     technologies: [
       { name: 'Vue.js (Vue 3)', levelKey: 'expert', icon: 'vue' },
-      { name: 'JavaScript ES6+', levelKey: 'expert', icon: 'javascript' },
+      { name: 'TypeScript', levelKey: 'expert', icon: 'typescript' },
+      { name: 'JavaScript (ES6+)', levelKey: 'expert', icon: 'javascript' },
       { name: 'Tailwind CSS', levelKey: 'expert', icon: 'tailwind' },
       { name: 'Pinia / Vuex', levelKey: 'expert', icon: 'pinia' },
       { name: 'HTML5 / CSS3', levelKey: 'expert', icon: 'html' },

@@ -44,9 +44,10 @@ export const portfolioData = {
       icon: "Layout",
       color: "from-violet-500 to-purple-600",
       borderGlow: "group-hover:border-violet-500/50",
-      description: "Fluid, responsive, and high-performance user interfaces crafted with Vue 3 (Composition API), Pinia state management, and modern component systems.",
+      description: "Fluid, responsive, and high-performance user interfaces crafted with Vue 3 (Composition API), TypeScript, Pinia state management, and modern component systems.",
       technologies: [
         { name: "Vue.js (Vue 3)", level: "Expert", icon: "vue" },
+        { name: "TypeScript", level: "Expert", icon: "typescript" },
         { name: "JavaScript (ES6+)", level: "Expert", icon: "javascript" },
         { name: "Pinia / Vuex", level: "Expert", icon: "pinia" },
         { name: "Tailwind CSS", level: "Expert", icon: "tailwind" },
