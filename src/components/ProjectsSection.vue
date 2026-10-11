@@ -5,7 +5,7 @@
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4 shadow-sm">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4 shadow-sm hover:scale-105 transition-transform cursor-default">
             <Radio class="w-3.5 h-3.5 animate-pulse text-emerald-600 dark:text-emerald-400" />
             <span>{{ t('projects.badge') }}</span>
           </div>
@@ -17,13 +17,13 @@
           </p>
         </div>
 
-        <div class="flex items-center gap-2 font-mono text-xs text-slate-700 dark:text-gray-300 bg-white dark:bg-[#111827] px-4 py-2.5 rounded-xl border border-slate-200 dark:border-gray-800 shadow-sm dark:shadow-none">
+        <div class="flex items-center gap-2 font-mono text-xs text-slate-700 dark:text-gray-300 bg-white dark:bg-[#111827] px-4 py-2.5 rounded-xl border border-slate-200 dark:border-gray-800 shadow-sm dark:shadow-none hover:border-cyan-500/40 transition-colors">
           <span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-ping"></span>
           <span>{{ projectsList.length }} {{ t('projects.nodesBadge') }}</span>
         </div>
       </div>
 
-      <!-- Projects Grid -->
+      <!-- Projects Grid with 3D Depth Hover -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
         <a 
           v-for="project in projectsList" 
@@ -31,23 +31,23 @@
           :href="project.url" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="group relative flex flex-col rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-gray-800 overflow-hidden transition-all duration-300 hover:border-cyan-500/50 dark:hover:border-cyan-500/50 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-cyan-500/10 hover:-translate-y-1.5 shadow-sm"
+          class="group relative flex flex-col rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-gray-800 overflow-hidden transition-all duration-300 hover:border-cyan-500/60 dark:hover:border-cyan-500/60 hover:shadow-2xl dark:hover:shadow-cyan-500/10 hover:-translate-y-2 shadow-sm card-hover-3d"
         >
           <!-- Project Preview Image Container with Full Screenshot Fit -->
           <div class="relative w-full aspect-[16/10] bg-slate-900 dark:bg-[#070B14] border-b border-slate-200 dark:border-gray-800 p-2 sm:p-2.5 flex items-center justify-center overflow-hidden">
             <!-- Window frame container for mockup feel -->
-            <div class="w-full h-full rounded-xl overflow-hidden bg-slate-950 dark:bg-[#0F172A]/90 border border-slate-800 dark:border-gray-800/80 shadow-inner flex items-center justify-center relative group-hover:border-cyan-500/30 transition-colors">
+            <div class="w-full h-full rounded-xl overflow-hidden bg-slate-950 dark:bg-[#0F172A]/90 border border-slate-800 dark:border-gray-800/80 shadow-inner flex items-center justify-center relative group-hover:border-cyan-500/40 transition-all duration-500">
               <img 
                 :src="project.image" 
                 :alt="t(project.titleKey)"
-                class="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                class="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-[1.04]"
                 @error="handleImageError($event, project.fallbackImage)"
               />
             </div>
             
             <!-- Live Indicator Badge Overlay -->
             <div class="absolute top-4 start-4 z-10">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/85 border border-emerald-500/50 text-[11px] font-mono font-semibold text-emerald-400 backdrop-blur-md shadow-lg">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/85 border border-emerald-500/50 text-[11px] font-mono font-semibold text-emerald-400 backdrop-blur-md shadow-lg group-hover:border-emerald-400 transition-colors">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 {{ t('projects.liveProd') }}
               </span>
@@ -55,14 +55,14 @@
 
             <!-- External Link Icon Badge Overlay -->
             <div class="absolute top-4 end-4 z-10">
-              <span class="p-2 rounded-xl bg-black/85 border border-gray-700 text-gray-200 group-hover:text-cyan-300 group-hover:border-cyan-500/60 flex items-center justify-center backdrop-blur-md shadow-lg transition-colors">
+              <span class="p-2 rounded-xl bg-black/85 border border-gray-700 text-gray-200 group-hover:text-cyan-300 group-hover:border-cyan-500/60 flex items-center justify-center backdrop-blur-md shadow-lg transition-all duration-300 group-hover:scale-110">
                 <ExternalLink class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:group-hover:-translate-x-0.5" />
               </span>
             </div>
 
             <!-- Category Ribbon Badge -->
             <div class="absolute bottom-4 start-4 z-10">
-              <span class="px-2.5 py-1 rounded-md bg-black/85 border border-cyan-500/40 text-cyan-300 text-[11px] font-medium backdrop-blur-md shadow-lg">
+              <span class="px-2.5 py-1 rounded-md bg-black/85 border border-cyan-500/40 text-cyan-300 text-[11px] font-medium backdrop-blur-md shadow-lg group-hover:border-cyan-400/80 transition-colors">
                 {{ t(project.badgeKey) }}
               </span>
             </div>
@@ -75,7 +75,7 @@
                 <div 
                   v-for="iconName in project.techIcons" 
                   :key="iconName" 
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform group-hover:scale-110 duration-200"
                   :title="iconName.toUpperCase()"
                 >
                   <TechIcon :name="iconName" />
@@ -106,7 +106,7 @@
             <!-- Launch Live System Prompt -->
             <div class="mt-4 pt-3 border-t border-slate-200 dark:border-gray-800/50 flex items-center justify-between text-xs font-mono text-slate-500 dark:text-gray-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
               <span class="truncate max-w-[180px]">{{ project.url.replace('https://', '') }}</span>
-              <span class="flex items-center gap-1 font-semibold text-cyan-600 dark:text-cyan-400">
+              <span class="flex items-center gap-1 font-semibold text-cyan-600 dark:text-cyan-400 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform">
                 <span>{{ t('projects.launchPrompt') }}</span>
                 <span class="rtl:rotate-180">&rarr;</span>
               </span>
